@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environments
+.venv/
+.env/
+
+# Generated STM outputs
+*.m
+*.png
+*.log
+gpu_batch_summary.tsv
+*.gpu.*.finp
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
