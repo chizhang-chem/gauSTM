@@ -6,7 +6,7 @@ It reads Gaussian formatted checkpoint (`.fchk`) files directly, reconstructs AO
 The current codebase supports three workflows:
 - single-state STM from one Gaussian reference state
 - delta-SCF / Dyson-orbital STM between initial and final Gaussian states
-- charge-transfer TDDFT STM where an excited final state is expanded into determinant components read from a Gaussian TDDFT log and accumulated at the Dyson level
+- TDDFT excited-state STM where an excited final state is expanded into determinant components read from a Gaussian TDDFT log and accumulated at the Dyson level
 
 ## Highlights
 
@@ -20,18 +20,13 @@ The current codebase supports three workflows:
 
 ## Repository Layout
 
-- `stm_bardeen.py`: main entry point and scan driver
-- `gaussian_fchk.py`: Gaussian formatted-checkpoint parser
-- `gaussian_tddft.py`: TDDFT excited-state parsing and determinant-component preparation
-- `pyscf_overlap.py`: AO-overlap backend and Gaussian/PySCF basis reordering
-- `bardeen_batch.py`: batched CPU/GPU Bardeen backend
-- `basis_utils.py`: Gaussian shell helpers, normalization, and cartesian/spherical transforms
-- `plot_stm.py`: renders a selected STM matrix from `.m` to `.png`
-- `transition_dipole.py`: separate transition-dipole helper retained as a standalone utility
-- `run_all_gpu_anion3.sh`: example GPU batch runner for a directory of `.finp` jobs
+- `gaustm/`: package directory containing the implementation modules
+- `stm_bardeen.py`: thin CLI wrapper for the main scan driver
+- `plot_stm.py`: thin CLI wrapper for matrix rendering
+- `run_batch_gpu.sh`: generic GPU batch runner for a directory of `.finp` jobs
 - `examples/`: cleaned template `.finp` inputs
 - `test/validation_summary.md`: compact summary of representative local validation runs
-- `docs/technical_report_zh.md`: longer Chinese implementation note kept for reference
+- `docs/implementation_notes_zh.md`: concise Chinese implementation note kept for reference
 
 ## Installation
 
@@ -106,7 +101,7 @@ Use:
 - `STM.TDA F`
 - `STM.Molfchk` and `STM.MolFinalfchk`
 
-### CT-TDDFT determinant-accumulation route
+### TDDFT determinant-accumulation route
 
 Use:
 - `STM.Dyson T`
@@ -130,7 +125,7 @@ Excited State   1: ...
 ```
 
 Those determinant components are accumulated explicitly at the Dyson level.
-If the log omits the configuration lines, the CT-TDDFT mode cannot reconstruct the excited-state expansion.
+If the log omits the configuration lines, the TDDFT mode cannot reconstruct the excited-state expansion.
 
 ## Probe Behavior
 
