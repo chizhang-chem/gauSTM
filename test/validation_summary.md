@@ -5,9 +5,9 @@ Instead, the table below summarizes representative local validation runs used du
 
 | Workflow | Probe | Backend | Grid | Representative output | Local result summary |
 | --- | --- | --- | --- | --- | --- |
-| CT-TDDFT, state 1 | s | GPU | 201x201 | `Ex001LMN1` | Completed in `25.4 s`, about `1966` points/s |
-| CT-TDDFT, states 1-5 | s | GPU | 201x201 | `Ex001..Ex005` | Completed in `26.2 s`, about `1965` points/s |
-| CT-TDDFT, states 1-5 | p_x | GPU | 201x201 | `Ex001..Ex005` | Completed in `72.7 s`, about `608` points/s |
+| TDDFT, state 1 | s | GPU | 201x201 | `Ex001LMN1` | Completed in `25.4 s`, about `1966` points/s |
+| TDDFT, states 1-5 | s | GPU | 201x201 | `Ex001..Ex005` | Completed in `26.2 s`, about `1965` points/s |
+| TDDFT, states 1-5 | p_x | GPU | 201x201 | `Ex001..Ex005` | Completed in `72.7 s`, about `608` points/s |
 | delta-SCF / Dyson, alpha-EA example | p_x | GPU | 201x201 | `Ex000LMN1` | Completed in `66.6 s`, about `647` points/s |
 | delta-SCF / Dyson, 10-job anion_3 p_x batch | p_x | GPU | 201x201 each | 10 `.m/.png/.log` outputs | All 10 jobs completed successfully in local validation |
 
