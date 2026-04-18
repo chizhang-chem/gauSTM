@@ -136,8 +136,9 @@ If the log omits the configuration lines, the TDDFT mode cannot reconstruct the 
 
 - 2D scan mode (`STM.Scan = 2`) is the implemented path
 - relative `.fchk` and `.log` paths are resolved from the current working directory
-- support has been validated on the Gaussian shell types encountered in the development cases, including the pure `G` shell present in the tested TDDFT reference
-- higher-angular-momentum basis combinations beyond the validated cases should still be treated as less tested
+- the current release has been validated on development cases whose AO basis shells extend through a pure `G` shell
+- the current public validation set covers `s` and `p_x` Gaussian-tip components
+- higher-angular-momentum AO shells or higher-order tip components are not part of the current validation set and should be treated as less-tested territory, even though parts of the code path have been generalized beyond the original `F`-shell-only implementation
 
 ## Validation
 
