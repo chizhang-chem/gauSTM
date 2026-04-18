@@ -1,0 +1,13 @@
+Citation Request
+================
+
+If you use gauSTM in research, presentations, proposals, reports, or publications,
+please cite the gauSTM repository.
+
+At the moment, the related manuscript has not yet been published.
+Until the paper is available, please cite the software repository itself using
+`CITATION.cff`.
+
+Once the associated paper is published, users should cite both:
+1. the gauSTM software repository
+2. the corresponding paper
