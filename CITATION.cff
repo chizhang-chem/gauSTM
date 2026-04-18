@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: >-
+  If you use gauSTM in academic work, please cite this repository.
+  An associated manuscript is in preparation; until that paper is available,
+  please cite the software itself using the metadata below.
+title: gauSTM
+version: 0.1.0
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Chi
+repository-code: https://github.com/chizhang-chem/gauSTM
+license: MIT
+abstract: >-
+  Gaussian-driven STM simulator based on the Bardeen approximation,
+  supporting single-state, delta-SCF/Dyson, and charge-transfer TDDFT workflows
+  from Gaussian fchk/log files.
+keywords:
+  - scanning tunneling microscopy
+  - Bardeen approximation
+  - Gaussian fchk
+  - delta-SCF
+  - TDDFT
+  - Dyson orbital
